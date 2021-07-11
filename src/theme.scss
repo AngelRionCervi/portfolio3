@@ -1,0 +1,14 @@
+@function get($map, $keys...) {
+  @each $key in $keys {
+    $map: map-get($map, $key);
+  }
+  @return $map;
+}
+
+$colors: (
+  background: #1A1A1A,
+  text: (
+    base: rgba(255, 255, 255, 0.8),
+    baseHover: rgba(255, 255, 255, 0.95),
+  ),
+);
