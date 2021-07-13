@@ -2,8 +2,8 @@
   import Delimiter from 'components/NavBar/Delimiter.svelte';
   import { onMount } from "svelte";
 
-  let list;
-  let select;
+  let list: HTMLElement;
+  let select: (index: number, list: HTMLElement) => void;
 
   onMount(() => {
     select(0, list);
